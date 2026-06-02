@@ -535,7 +535,9 @@ Facebook
 © 2026 Divine Hair • Luxury Hair Salon Drogheda
 </footer>
 
-<a href="#booking" class="floating-book">
+<a href="#"
+   class="floating-book"
+   onclick="openBooking(); return false;">
 BOOK NOW
 </a>
 
@@ -558,6 +560,19 @@ observer.observe(el);
 });
 
 </script>
+<script src="https://assets.calendly.com/assets/external/widget.js" async></script>
 
+<script>
+
+function openBooking() {
+
+    Calendly.initPopupWidget({
+        url: 'https://calendly.com/lybamedia'
+    });
+
+    return false;
+}
+
+</script>
 </body>
 </html>
