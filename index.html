@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Divine Hair | Luxury Hair Salon Drogheda</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<script src="https://assets.calendly.com/assets/external/widget.js" async></script>
+
+<style>
+
+:root{
+--gold:#d4af37;
+--black:#0b0b0b;
+--dark:#151515;
+--text:#f8f8f8;
+}
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+font-family:'Poppins',sans-serif;
+background:var(--black);
+color:var(--text);
+overflow-x:hidden;
+}
+
+header{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+padding:20px 8%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+background:rgba(0,0,0,.85);
+backdrop-filter:blur(10px);
+z-index:1000;
+}
+
+.logo{
+font-family:'Cormorant Garamond',serif;
+font-size:2rem;
+font-weight:700;
+color:var(--gold);
+letter-spacing:2px;
+}
+
+nav{
+display:flex;
+gap:25px;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+transition:.3s;
+}
+
+nav a:hover{
+color:var(--gold);
+}
+
+.hero{
+height:100vh;
+background:
+linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)),
+url('https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?w=1600');
+background-size:cover;
+background-position:center;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+padding:20px;
+}
+
+.hero-content{
+max-width:900px;
+animation:fadeUp 1.2s ease;
+}
+
+.hero h1{
+font-family:'Cormorant Garamond',serif;
+font-size:5rem;
+margin-bottom:20px;
+}
+
+.hero p{
+font-size:1.2rem;
+margin-bottom:35px;
+}
+
+.btn{
+display:inline-block;
+padding:16px 36px;
+background:var(--gold);
+color:#000;
+font-weight:600;
+text-decoration:none;
+border-radius:50px;
+border:none;
+cursor:pointer;
+transition:.3s;
+}
+
+.btn:hover{
+transform:translateY(-3px);
+}
+
+section{
+padding:100px 8%;
+}
+
+.section-title{
+text-align:center;
+font-family:'Cormorant Garamond',serif;
+font-size:3rem;
+color:var(--gold);
+margin-bottom:60px;
+}
+
+.about{
+max-width:900px;
+margin:auto;
+text-align:center;
+line-height:1.9;
+font-size:1.1rem;
+}
+
+.services{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
+
+.card{
+background:#161616;
+padding:30px;
+border-radius:20px;
+border:1px solid rgba(212,175,55,.15);
+transition:.4s;
+}
+
+.card:hover{
+transform:translateY(-8px);
+border-color:var(--gold);
+}
+
+.card h3{
+color:var(--gold);
+margin-bottom:15px;
+}
+
+.card p{
+margin-bottom:20px;
+}
+
+.book-service{
+width:100%;
+}
+
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:20px;
+}
+
+.gallery img{
+width:100%;
+height:350px;
+object-fit:cover;
+border-radius:18px;
+transition:.4s;
+}
+
+.gallery img:hover{
+transform:scale(1.03);
+}
+
+.testimonials{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:25px;
+}
+
+.review{
+background:#161616;
+padding:25px;
+border-radius:18px;
+}
+
+.stars{
+color:gold;
+margin-bottom:10px;
+}
+
+.contact{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:40px;
+align-items:center;
+}
+
+.contact-info h3{
+color:var(--gold);
+margin-bottom:15px;
+}
+
+.contact-info p{
+margin-bottom:12px;
+}
+
+.socials{
+margin-top:20px;
+}
+
+.socials a{
+display:inline-block;
+margin-right:15px;
+padding:10px 15px;
+border:1px solid var(--gold);
+border-radius:30px;
+text-decoration:none;
+color:var(--gold);
+}
+
+iframe{
+width:100%;
+height:350px;
+border:none;
+border-radius:20px;
+}
+
+footer{
+background:#080808;
+padding:30px;
+text-align:center;
+color:#aaa;
+}
+
+.fade{
+opacity:0;
+transform:translateY(40px);
+transition:1s;
+}
+
+.fade.show{
+opacity:1;
+transform:translateY(0);
+}
+
+@keyframes fadeUp{
+from{
+opacity:0;
+transform:translateY(50px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+.mobile-menu{
+display:none;
+}
+
+@media(max-width:768px){
+
+.hero h1{
+font-size:3rem;
+}
+
+.contact{
+grid-template-columns:1fr;
+}
+
+nav{
+display:none;
+}
+
+.mobile-menu{
+display:block;
+color:white;
+font-size:1.5rem;
+}
+
+}
+
+</style>
+</head>
+<body>
+
+<header>
+
+<div class="logo">DIVINE HAIR</div>
+
+<nav>
+<a href="#about">About</a>
+<a href="#services">Services</a>
+<a href="#gallery">Gallery</a>
+<a href="#reviews">Reviews</a>
+<a href="#contact">Contact</a>
+</nav>
+
+<div class="mobile-menu">☰</div>
+
+</header>
+
+<section class="hero">
+
+<div class="hero-content">
+
+<h1>Luxury Hair Colour & Styling</h1>
+
+<p>
+Highlights • Balayage • Colour • Blowdries • Occasion Hair
+</p>
+
+<button
+class="btn"
+onclick="openBooking()">
+Book Appointment
+</button>
+
+</div>
+
+</section>
+
+<section id="about" class="fade">
+
+<h2 class="section-title">About Divine Hair</h2>
+
+<div class="about">
+At Divine Hair we specialise in luxury colour services,
+highlights, balayage, cutting and styling. Our focus is
+creating beautiful, healthy hair while delivering a
+relaxing salon experience in the heart of Drogheda.
+</div>
+
+</section>
+
+<section id="services" class="fade">
+
+<h2 class="section-title">Our Services</h2>
+
+<div class="services">
+
+<div class="card">
+<h3>Balayage</h3>
+<p>Hand-painted colour for natural dimension.</p>
+<button class="btn book-service" onclick="openBooking()">
+Book Balayage
+</button>
+</div>
+
+<div class="card">
+<h3>Full Head Highlights</h3>
+<p>Bright blonde transformations.</p>
+<button class="btn book-service" onclick="openBooking()">
+Book Highlights
+</button>
+</div>
+
+<div class="card">
+<h3>Colour & Blowdry</h3>
+<p>Professional colour refresh and styling.</p>
+<button class="btn book-service" onclick="openBooking()">
+Book Colour
+</button>
+</div>
+
+<div class="card">
+<h3>Wedding Hair</h3>
+<p>Elegant upstyles for special occasions.</p>
+<button class="btn book-service" onclick="openBooking()">
+Book Wedding Hair
+</button>
+</div>
+
+</div>
+
+</section>
+
+<section id="gallery" class="fade">
+
+<h2 class="section-title">Recent Transformations</h2>
+
+<div class="gallery">
+
+<img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?w=800">
+<img src="https://images.unsplash.com/photo-1522337660859-02fbefca4702?w=800">
+<img src="https://images.unsplash.com/photo-1512496015851-a90fb38ba796?w=800">
+<img src="https://images.unsplash.com/photo-1560869713-da86a9ec94eb?w=800">
+<img src="https://images.unsplash.com/photo-1487412912498-0447578fcca8?w=800">
+<img src="https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?w=800">
+
+</div>
+
+</section>
+
+<section id="reviews" class="fade">
+
+<h2 class="section-title">Client Reviews</h2>
+
+<div class="testimonials">
+
+<div class="review">
+<div class="stars">★★★★★</div>
+<p>Fantastic colour and amazing service. Highly recommended.</p>
+</div>
+
+<div class="review">
+<div class="stars">★★★★★</div>
+<p>Absolutely love my balayage. Couldn't be happier.</p>
+</div>
+
+<div class="review">
+<div class="stars">★★★★★</div>
+<p>Professional, friendly and always beautiful results.</p>
+</div>
+
+</div>
+
+</section>
+
+<section id="contact" class="fade">
+
+<h2 class="section-title">Contact Us</h2>
+
+<div class="contact">
+
+<div class="contact-info">
+
+<h3>Divine Hair</h3>
+
+<p>📞 085 870 5143</p>
+<p>📧 divinesalon09@gmail.com</p>
+<p>📍 West Street, Drogheda, Co. Louth</p>
+
+<div class="socials">
+
+<a href="https://www.facebook.com/divine.hairbeauty.3/" target="_blank">
+Facebook
+</a>
+
+<a href="#" target="_blank">
+Instagram
+</a>
+
+</div>
+
+<br><br>
+
+<button class="btn" onclick="openBooking()">
+Book Online
+</button>
+
+</div>
+
+<div>
+
+<iframe
+src="https://maps.google.com/maps?q=Drogheda%20West%20Street&t=&z=15&ie=UTF8&iwloc=&output=embed">
+</iframe>
+
+</div>
+
+</div>
+
+</section>
+
+<footer>
+
+© 2026 Divine Hair | Luxury Hair Salon Drogheda
+
+</footer>
+
+<script>
+
+function openBooking(){
+
+Calendly.initPopupWidget({
+url:'https://calendly.com/YOUR-CALENDLY-LINK'
+});
+
+return false;
+}
+
+const observer = new IntersectionObserver(entries => {
+
+entries.forEach(entry => {
+
+if(entry.isIntersecting){
+entry.target.classList.add('show');
+}
+
+});
+
+});
+
+document.querySelectorAll('.fade').forEach(el => {
+observer.observe(el);
+});
+
+</script>
+
+</body>
+</html>
