@@ -1,22 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Divine Hair | Luxury Hair Salon Drogheda</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+<meta name="description"
+content="Professional Hair Salon in Drogheda specialising in Balayage, Highlights, Hair Colouring, Blowdries and Wedding Hair.">
+
+<meta name="keywords"
+content="Hair Salon Drogheda, Balayage Drogheda, Hair Colour Drogheda, Highlights Drogheda">
+
+<meta name="theme-color" content="#d4af37">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;700&family=Poppins:wght@300;400;500;600&display=swap"
+rel="stylesheet">
 
 <script src="https://assets.calendly.com/assets/external/widget.js" async></script>
+
+<script type="application/ld+json">
+{
+ "@context":"https://schema.org",
+ "@type":"HairSalon",
+ "name":"Divine Hair",
+ "telephone":"0858705143",
+ "email":"divinesalon09@gmail.com",
+ "address":{
+   "@type":"PostalAddress",
+   "streetAddress":"West Street",
+   "addressLocality":"Drogheda",
+   "addressCountry":"IE"
+ }
+}
+</script>
 
 <style>
 
 :root{
 --gold:#d4af37;
---black:#0b0b0b;
+--black:#090909;
 --dark:#151515;
---text:#f8f8f8;
+--white:#ffffff;
 }
 
 *{
@@ -31,30 +59,29 @@ scroll-behavior:smooth;
 
 body{
 font-family:'Poppins',sans-serif;
-background:var(--black);
-color:var(--text);
+background:#000;
+color:#fff;
 overflow-x:hidden;
 }
 
 header{
 position:fixed;
 top:0;
-left:0;
 width:100%;
 padding:20px 8%;
 display:flex;
 justify-content:space-between;
 align-items:center;
 background:rgba(0,0,0,.85);
-backdrop-filter:blur(10px);
+backdrop-filter:blur(12px);
 z-index:1000;
 }
 
 .logo{
 font-family:'Cormorant Garamond',serif;
 font-size:2rem;
-font-weight:700;
 color:var(--gold);
+font-weight:700;
 letter-spacing:2px;
 }
 
@@ -64,8 +91,8 @@ gap:25px;
 }
 
 nav a{
-color:white;
 text-decoration:none;
+color:white;
 transition:.3s;
 }
 
@@ -81,38 +108,37 @@ url('https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?w=1600');
 background-size:cover;
 background-position:center;
 display:flex;
-align-items:center;
 justify-content:center;
+align-items:center;
 text-align:center;
 padding:20px;
 }
 
 .hero-content{
-max-width:900px;
-animation:fadeUp 1.2s ease;
+max-width:850px;
 }
 
 .hero h1{
-font-family:'Cormorant Garamond',serif;
 font-size:5rem;
+font-family:'Cormorant Garamond',serif;
 margin-bottom:20px;
 }
 
 .hero p{
-font-size:1.2rem;
-margin-bottom:35px;
+font-size:1.3rem;
+margin-bottom:30px;
 }
 
 .btn{
 display:inline-block;
 padding:16px 36px;
 background:var(--gold);
-color:#000;
-font-weight:600;
-text-decoration:none;
-border-radius:50px;
 border:none;
+border-radius:50px;
+color:black;
+font-weight:600;
 cursor:pointer;
+text-decoration:none;
 transition:.3s;
 }
 
@@ -126,8 +152,8 @@ padding:100px 8%;
 
 .section-title{
 text-align:center;
-font-family:'Cormorant Garamond',serif;
 font-size:3rem;
+font-family:'Cormorant Garamond',serif;
 color:var(--gold);
 margin-bottom:60px;
 }
@@ -136,7 +162,7 @@ margin-bottom:60px;
 max-width:900px;
 margin:auto;
 text-align:center;
-line-height:1.9;
+line-height:1.8;
 font-size:1.1rem;
 }
 
@@ -147,10 +173,10 @@ gap:25px;
 }
 
 .card{
-background:#161616;
+background:#151515;
 padding:30px;
 border-radius:20px;
-border:1px solid rgba(212,175,55,.15);
+border:1px solid rgba(212,175,55,.2);
 transition:.4s;
 }
 
@@ -164,14 +190,6 @@ color:var(--gold);
 margin-bottom:15px;
 }
 
-.card p{
-margin-bottom:20px;
-}
-
-.book-service{
-width:100%;
-}
-
 .gallery{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
@@ -182,29 +200,32 @@ gap:20px;
 width:100%;
 height:350px;
 object-fit:cover;
-border-radius:18px;
-transition:.4s;
-}
-
-.gallery img:hover{
-transform:scale(1.03);
+border-radius:20px;
 }
 
 .testimonials{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
 gap:25px;
 }
 
 .review{
-background:#161616;
+background:#151515;
 padding:25px;
-border-radius:18px;
+border-radius:20px;
 }
 
 .stars{
 color:gold;
 margin-bottom:10px;
+}
+
+.booking-box{
+max-width:900px;
+margin:auto;
+background:#111;
+padding:25px;
+border-radius:25px;
 }
 
 .contact{
@@ -214,67 +235,46 @@ gap:40px;
 align-items:center;
 }
 
-.contact-info h3{
-color:var(--gold);
-margin-bottom:15px;
-}
-
 .contact-info p{
 margin-bottom:12px;
 }
 
-.socials{
-margin-top:20px;
-}
-
 .socials a{
 display:inline-block;
-margin-right:15px;
-padding:10px 15px;
+padding:10px 18px;
 border:1px solid var(--gold);
 border-radius:30px;
+margin-right:10px;
 text-decoration:none;
 color:var(--gold);
 }
 
 iframe{
 width:100%;
-height:350px;
+height:400px;
 border:none;
 border-radius:20px;
 }
 
 footer{
-background:#080808;
+background:#050505;
 padding:30px;
 text-align:center;
 color:#aaa;
 }
 
-.fade{
-opacity:0;
-transform:translateY(40px);
-transition:1s;
-}
-
-.fade.show{
-opacity:1;
-transform:translateY(0);
-}
-
-@keyframes fadeUp{
-from{
-opacity:0;
-transform:translateY(50px);
-}
-to{
-opacity:1;
-transform:translateY(0);
-}
-}
-
-.mobile-menu{
-display:none;
+.floating-book{
+position:fixed;
+right:20px;
+bottom:20px;
+background:var(--gold);
+color:black;
+padding:15px 25px;
+border-radius:50px;
+font-weight:600;
+cursor:pointer;
+z-index:999;
+box-shadow:0 10px 25px rgba(0,0,0,.3);
 }
 
 @media(max-width:768px){
@@ -283,24 +283,19 @@ display:none;
 font-size:3rem;
 }
 
-.contact{
-grid-template-columns:1fr;
-}
-
 nav{
 display:none;
 }
 
-.mobile-menu{
-display:block;
-color:white;
-font-size:1.5rem;
+.contact{
+grid-template-columns:1fr;
 }
 
 }
 
 </style>
 </head>
+
 <body>
 
 <header>
@@ -311,11 +306,9 @@ font-size:1.5rem;
 <a href="#about">About</a>
 <a href="#services">Services</a>
 <a href="#gallery">Gallery</a>
-<a href="#reviews">Reviews</a>
+<a href="#booking">Book</a>
 <a href="#contact">Contact</a>
 </nav>
-
-<div class="mobile-menu">☰</div>
 
 </header>
 
@@ -326,12 +319,10 @@ font-size:1.5rem;
 <h1>Luxury Hair Colour & Styling</h1>
 
 <p>
-Highlights • Balayage • Colour • Blowdries • Occasion Hair
+Balayage • Highlights • Hair Colour • Blowdries • Wedding Hair
 </p>
 
-<button
-class="btn"
-onclick="openBooking()">
+<button class="btn" onclick="openBooking()">
 Book Appointment
 </button>
 
@@ -339,20 +330,20 @@ Book Appointment
 
 </section>
 
-<section id="about" class="fade">
+<section id="about">
 
 <h2 class="section-title">About Divine Hair</h2>
 
 <div class="about">
-At Divine Hair we specialise in luxury colour services,
-highlights, balayage, cutting and styling. Our focus is
-creating beautiful, healthy hair while delivering a
-relaxing salon experience in the heart of Drogheda.
+At Divine Hair, we specialise in premium colour services,
+beautiful blondes, balayage transformations, highlights,
+precision cutting and occasion styling. Our mission is to
+help every client look and feel their absolute best.
 </div>
 
 </section>
 
-<section id="services" class="fade">
+<section id="services">
 
 <h2 class="section-title">Our Services</h2>
 
@@ -360,58 +351,51 @@ relaxing salon experience in the heart of Drogheda.
 
 <div class="card">
 <h3>Balayage</h3>
-<p>Hand-painted colour for natural dimension.</p>
-<button class="btn book-service" onclick="openBooking()">
-Book Balayage
-</button>
+<p>Luxury hand-painted colour.</p>
 </div>
 
 <div class="card">
 <h3>Full Head Highlights</h3>
 <p>Bright blonde transformations.</p>
-<button class="btn book-service" onclick="openBooking()">
-Book Highlights
-</button>
 </div>
 
 <div class="card">
 <h3>Colour & Blowdry</h3>
-<p>Professional colour refresh and styling.</p>
-<button class="btn book-service" onclick="openBooking()">
-Book Colour
-</button>
+<p>Complete colour refresh and finish.</p>
 </div>
 
 <div class="card">
 <h3>Wedding Hair</h3>
-<p>Elegant upstyles for special occasions.</p>
-<button class="btn book-service" onclick="openBooking()">
-Book Wedding Hair
-</button>
+<p>Elegant bridal and occasion styling.</p>
 </div>
 
 </div>
 
 </section>
 
-<section id="gallery" class="fade">
+<section id="gallery">
 
-<h2 class="section-title">Recent Transformations</h2>
+<h2 class="section-title">Gallery</h2>
 
 <div class="gallery">
 
 <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?w=800">
+
 <img src="https://images.unsplash.com/photo-1522337660859-02fbefca4702?w=800">
+
 <img src="https://images.unsplash.com/photo-1512496015851-a90fb38ba796?w=800">
+
 <img src="https://images.unsplash.com/photo-1560869713-da86a9ec94eb?w=800">
+
 <img src="https://images.unsplash.com/photo-1487412912498-0447578fcca8?w=800">
+
 <img src="https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?w=800">
 
 </div>
 
 </section>
 
-<section id="reviews" class="fade">
+<section>
 
 <h2 class="section-title">Client Reviews</h2>
 
@@ -419,24 +403,40 @@ Book Wedding Hair
 
 <div class="review">
 <div class="stars">★★★★★</div>
-<p>Fantastic colour and amazing service. Highly recommended.</p>
+Amazing colour and excellent service.
 </div>
 
 <div class="review">
 <div class="stars">★★★★★</div>
-<p>Absolutely love my balayage. Couldn't be happier.</p>
+Best balayage I've ever had.
 </div>
 
 <div class="review">
 <div class="stars">★★★★★</div>
-<p>Professional, friendly and always beautiful results.</p>
+Friendly staff and beautiful results.
 </div>
 
 </div>
 
 </section>
 
-<section id="contact" class="fade">
+<section id="booking">
+
+<h2 class="section-title">Book Online</h2>
+
+<div class="booking-box">
+
+<div
+class="calendly-inline-widget"
+data-url="https://calendly.com/lybamedia/30min"
+style="min-width:320px;height:700px;">
+</div>
+
+</div>
+
+</section>
+
+<section id="contact">
 
 <h2 class="section-title">Contact Us</h2>
 
@@ -444,11 +444,11 @@ Book Wedding Hair
 
 <div class="contact-info">
 
-<h3>Divine Hair</h3>
+<p><strong>Phone:</strong> 085 870 5143</p>
 
-<p>📞 085 870 5143</p>
-<p>📧 divinesalon09@gmail.com</p>
-<p>📍 West Street, Drogheda, Co. Louth</p>
+<p><strong>Email:</strong> divinesalon09@gmail.com</p>
+
+<p><strong>Location:</strong> West Street, Drogheda</p>
 
 <div class="socials">
 
@@ -456,17 +456,7 @@ Book Wedding Hair
 Facebook
 </a>
 
-<a href="#" target="_blank">
-Instagram
-</a>
-
 </div>
-
-<br><br>
-
-<button class="btn" onclick="openBooking()">
-Book Online
-</button>
 
 </div>
 
@@ -484,36 +474,25 @@ src="https://maps.google.com/maps?q=Drogheda%20West%20Street&t=&z=15&ie=UTF8&iwl
 
 <footer>
 
-© 2026 Divine Hair | Luxury Hair Salon Drogheda
+© 2026 Divine Hair — Luxury Hair Salon Drogheda
 
 </footer>
+
+<div class="floating-book"
+onclick="openBooking()">
+BOOK NOW
+</div>
 
 <script>
 
 function openBooking(){
 
 Calendly.initPopupWidget({
-url:'https://calendly.com/YOUR-CALENDLY-LINK'
+url:'https://calendly.com/lybamedia/30min'
 });
 
 return false;
 }
-
-const observer = new IntersectionObserver(entries => {
-
-entries.forEach(entry => {
-
-if(entry.isIntersecting){
-entry.target.classList.add('show');
-}
-
-});
-
-});
-
-document.querySelectorAll('.fade').forEach(el => {
-observer.observe(el);
-});
 
 </script>
 
